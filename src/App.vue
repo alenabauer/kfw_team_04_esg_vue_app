@@ -15,5 +15,5 @@ import { NMessageProvider } from 'naive-ui'
     </nav>
   </header> -->
 
-  <!-- <RouterView /> -->
+  <RouterView />
 </template>
