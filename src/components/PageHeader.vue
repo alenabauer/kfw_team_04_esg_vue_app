@@ -1,6 +1,6 @@
 <template>
-  <n-page-header subtitle="ESG Report Analyser" style="margin-bottom: 2rem; color: #005a8c">
-    <template #title>KFW EcoScan</template>
+  <n-page-header style="margin-bottom: 2rem; color: #005a8c">
+    <template #title>ESG Analyser</template>
     <template #avatar>
       <n-icon size="large" color="#abba2d">
         <globe />
