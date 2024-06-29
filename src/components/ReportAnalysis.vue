@@ -14,32 +14,150 @@
       {{ report.title }}
     </h2>
     <n-flex>
-      <a href="/path/to/pdf" target="_blank" style="text-decoration: none; color: #005a8c;" download>
+      <a href="/path/to/pdf" target="_blank" style="text-decoration: none; color: #005a8c" download>
         <n-icon><download /></n-icon> Download Original PDF
       </a>
-      <a href="/path/to/pdf" target="_blank" style="text-decoration: none; color: #005a8c;" download>
-        <n-icon><download /></n-icon> Download Answers CSV
+      <a href="/path/to/pdf" target="_blank" style="text-decoration: none; color: #005a8c" download>
+        <n-icon><download /></n-icon> Download Summary CSV
       </a>
     </n-flex>
 
-
-    <n-card title="Environmental" v-if="environmental.length">
-      <n-thing v-for="answer in environmental" :key="answer.question_id" :title="answer.question" style="margin-bottom: 1rem;">
-        {{ answer.answer }}
+    <n-flex vertical style="margin: 2rem 0">
+      <n-thing
+        content-indented
+        v-if="environmental.length"
+        style="background-color: #ebf3f7; padding: 2rem"
+      >
+        <template #avatar>
+          <n-icon-wrapper :size="32" color="#abba2d" border-radius="2">
+            <n-icon :size="24"><leaf /></n-icon>
+          </n-icon-wrapper>
+        </template>
+        <template #header>
+          <h3>Environmental</h3>
+        </template>
+        <n-grid cols="12" x-gap="12">
+          <n-grid-item span="10">
+            <n-flex
+              v-for="answer in environmental"
+              :key="answer.question_id"
+              style="margin-bottom: 1rem"
+            >
+              <n-text>{{ answer.question }}</n-text>
+              <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+            </n-flex>
+          </n-grid-item>
+          <n-grid-item span="2">
+            <n-flex vertical align="center" style="margin-bottom: 2rem">
+              <n-text depth="3"> Water Consumed</n-text>
+              <n-text style="font-size: 1.5rem">
+                <n-number-animation
+                  ref="numberAnimationInstRef"
+                  :from="0"
+                  :to="1178788"
+                  :active="true"
+                  :precision="0"
+                />
+                m³</n-text
+              >
+              <n-flex style="color: #abba2d" justify="center" align="center">
+                <n-text style="color: inherit; font-size: 1rem">-10.96%</n-text>
+                <n-icon><caret-down /></n-icon>
+              </n-flex>
+            </n-flex>
+            <n-flex vertical align="center">
+              <n-text depth="3"> Energy Consumed</n-text>
+              <n-text style="font-size: 1.5rem">
+                <n-number-animation
+                  ref="numberAnimationInstRef"
+                  :from="0"
+                  :to="1574357"
+                  :active="true"
+                  :precision="0"
+                  :duration="2000"
+                />
+                GJ</n-text
+              >
+              <n-flex style="color: #abba2d" justify="center" align="center">
+                <n-text style="color: inherit; font-size: 1rem">-19.88%</n-text>
+                <n-icon><caret-down /></n-icon>
+              </n-flex>
+            </n-flex>
+          </n-grid-item>
+        </n-grid>
       </n-thing>
-    </n-card>
 
-    <n-card title="Social" v-if="social.length" style="margin-top: 1rem;">
-      <n-thing v-for="answer in social" :key="answer.question_id" :title="answer.question" style="margin-bottom: 1rem;">
-        {{ answer.answer }}
+      <n-thing
+        content-indented
+        v-if="social.length"
+        style="background-color: #f6f5ed; padding: 2rem"
+      >
+        <template #avatar>
+          <n-icon-wrapper :size="32" color="#abba2d" border-radius="2">
+            <n-icon :size="24"><people /></n-icon>
+          </n-icon-wrapper>
+        </template>
+        <template #header>
+          <h3>Social</h3>
+        </template>
+        <n-grid cols="12" x-gap="16">
+          <n-grid-item span="10">
+            <n-flex v-for="answer in social" :key="answer.question_id" style="margin-bottom: 1rem">
+              <n-text>{{ answer.question }}</n-text>
+              <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+            </n-flex>
+          </n-grid-item>
+          <n-grid-item span="2">
+            <n-flex vertical align="center" style="margin-bottom: 2rem">
+              <n-text depth="3"> Women in Leadership</n-text>
+              <n-text style="font-size: 1.5rem">
+                <n-number-animation
+                  ref="numberAnimationInstRef"
+                  :from="0"
+                  :to="35.51"
+                  :active="true"
+                  :precision="2"
+                />%</n-text
+              >
+              <n-flex style="color: #abba2d" justify="center" align="center">
+                <n-text style="color: inherit; font-size: 1rem">+5.37%</n-text>
+                <n-icon><caret-up /></n-icon>
+              </n-flex>
+            </n-flex>
+          </n-grid-item>
+        </n-grid>
       </n-thing>
-    </n-card>
 
-    <n-card title="Governance" v-if="governance.length" style="margin-top: 1rem;">
-      <n-thing v-for="answer in governance" :key="answer.question_id" :title="answer.question" style="margin-bottom: 1rem;">
-        {{ answer.answer }}
+      <n-thing
+        content-indented
+        v-if="governance.length"
+        style="background-color: #ebf3f7; padding: 2rem"
+      >
+        <template #avatar>
+          <n-icon-wrapper :size="32" color="#abba2d" border-radius="2">
+            <n-icon :size="24"><bar-chart /></n-icon>
+          </n-icon-wrapper>
+        </template>
+        <template #header>
+          <h3>Governance</h3>
+        </template>
+        <n-grid cols="12" x-gap="16">
+          <n-grid-item span="10">
+            <n-flex
+              v-for="answer in governance"
+              :key="answer.question_id"
+              style="margin-bottom: 1rem"
+            >
+              <n-text>{{ answer.question }}</n-text>
+              <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+            </n-flex>
+          </n-grid-item>
+          <n-grid-item span="2" align="center">
+            <img src="/gri.png" alt="GRI" style="width: 40%; height: auto" />
+          </n-grid-item>
+        </n-grid>
       </n-thing>
-    </n-card>
+    </n-flex>
   </div>
 
   <h2 v-else>Loading...</h2>
@@ -49,8 +167,26 @@
 import { onMounted, ref, defineProps, computed, toRefs } from 'vue'
 import { useClientsStore } from '@/stores/store'
 import { storeToRefs } from 'pinia'
-import { NCard, NThing, NBreadcrumb, NBreadcrumbItem, NIcon, NFlex } from 'naive-ui'
-import { DownloadOutline as Download } from '@vicons/ionicons5'
+import {
+  NThing,
+  NBreadcrumb,
+  NBreadcrumbItem,
+  NIcon,
+  NFlex,
+  NIconWrapper,
+  NText,
+  NGrid,
+  NGridItem,
+  NNumberAnimation
+} from 'naive-ui'
+import {
+  DownloadOutline as Download,
+  LeafOutline as Leaf,
+  PeopleOutline as People,
+  BarChartOutline as BarChart,
+  CaretDown,
+  CaretUp
+} from '@vicons/ionicons5'
 
 const props = defineProps({
   reportId: {
@@ -74,15 +210,13 @@ const client = computed(() => {
 
 const answers = computed(() => report.value?.analysis?.answers || [])
 
-const environmental = computed(() => answers.value.filter(answer =>
-  answer.category === 'environmental'
-))
-const social = computed(() => answers.value.filter(answer =>
-  answer.category === 'social'
-))
-const governance = computed(() => answers.value.filter(answer =>
-  answer.category === 'governance'
-))
+const environmental = computed(() =>
+  answers.value.filter((answer) => answer.category === 'environmental')
+)
+const social = computed(() => answers.value.filter((answer) => answer.category === 'social'))
+const governance = computed(() =>
+  answers.value.filter((answer) => answer.category === 'governance')
+)
 
 onMounted(async () => {
   const fetchedReport = await store.fetchReportById(props.reportId)

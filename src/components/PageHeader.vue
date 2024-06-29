@@ -3,7 +3,7 @@
     <n-page-header style="margin-bottom: 2rem; color: #005a8c">
       <template #title>ESG Analyser</template>
       <template #avatar>
-        <n-icon size="large" color="#abba2d">
+        <n-icon size="32" color="#abba2d">
           <globe />
         </n-icon>
       </template>

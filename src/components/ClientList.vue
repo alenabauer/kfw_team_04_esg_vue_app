@@ -44,7 +44,7 @@ const columns = [
           onClick: () => router.push(`/clients/${row.clientId}/reports/${row.reportId}`),
           style: 'cursor: pointer; color: blue; text-decoration: underline;'
         },
-        row.report || ''
+        row.fileName || ''
       )
   },
   {

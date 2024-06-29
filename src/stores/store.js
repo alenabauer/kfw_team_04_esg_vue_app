@@ -77,7 +77,8 @@ const mockAnalysis = {
   answers: [
     {
       question_id: 1,
-      question: 'Is there sustainability reporting in the company? If yes, name the standard the company uses.',
+      question:
+        'Is there sustainability reporting in the company? If yes, name the standard the company uses.',
       answer: 'Yes, GRI',
       contexts: ['context 1'],
       category: 'governance'
@@ -85,63 +86,69 @@ const mockAnalysis = {
     {
       question_id: 2,
       question: 'What was the water consumption in the fiscal year?',
-      answer: '1000 m³',
+      answer: '1,178,788 m³',
       contexts: ['context 1'],
       category: 'environmental'
     },
     {
       question_id: 3,
       question: 'Which transitional risk drivers are particularly significant for the company?',
-      answer: 'Climate change',
+      answer:
+        'Environmental and climate change risks, human rights violations, risks to local communities, and workforce risks',
       contexts: [],
       category: 'environmental'
     },
     {
       question_id: 4,
-      question: 'To what extent does the company plan to reduce greenhouse gas emissions (Scope 1) by 2030?',
-      answer: '50%',
+      question:
+        'To what extent does the company plan to reduce greenhouse gas emissions (Scope 1) by 2030?',
+      answer: '70% against a 2019 baseline',
       contexts: [],
       category: 'environmental'
     },
     {
       question_id: 5,
       question: 'Which acute physical climate risks are most relevant for the company?',
-      answer: 'Floods',
+      answer: 'Extreme weather',
       contexts: [],
       category: 'environmental'
     },
     {
       question_id: 6,
-      question: 'What goals does the company have for increasing the proportion of women in leadership positions?',
-      answer: '30%',
+      question:
+        'What goals does the company have for increasing the proportion of women in leadership positions?',
+      answer: '40%',
       contexts: [],
       category: 'social'
     },
     {
       question_id: 7,
       question: 'What is the proportion of women in leadership positions in the reporting year?',
-      answer: '20%',
+      answer: '35.51%',
       contexts: [],
       category: 'social'
     },
     {
       question_id: 8,
-      question: 'Is there a person responsible for sustainability in the company? If yes, are they a member of the board?',
-      answer: 'Yes, no',
+      question:
+        'Is there a person responsible for sustainability in the company? If yes, are they a member of the board?',
+      answer: 'Yes, yes',
       contexts: [],
-      category: 'social'
+      category: 'governance'
     },
     {
       question_id: 9,
-      question: 'Is the achievement of sustainability goals part of the board\'s compensation system?',
+      question:
+        "Is the achievement of sustainability goals part of the board's compensation system?",
       answer: 'Yes',
       contexts: [],
-      category: 'social'
+      category: 'governance'
     },
     {
       question_id: 10,
-      question: 'What was the electricity consumption in the reporting year in GWh, and what was the percentage of electricity consumption from renewable sources?',
-      answer: '1000 GWh, 50%',
+      question:
+        'What was the electricity consumption in the reporting year in GWh, and what was the percentage of electricity consumption from renewable sources?',
+      answer: '1,574,357 GJ, 100%',
       contexts: [],
       category: 'environmental'
     }
@@ -149,7 +156,7 @@ const mockAnalysis = {
 }
 
 const mockReportsDetails = {
-  'client_1_report_2023': {
+  client_1_report_2023: {
     clientId: 1,
     reportId: 'client_1_report_2023',
     title: 'Volkswagen Group Sustainability Report 2023',
@@ -157,7 +164,7 @@ const mockReportsDetails = {
     timestamp: '2023-12-01',
     analysis: mockAnalysis
   },
-  'client_3_report_2022': {
+  client_3_report_2022: {
     clientId: 3,
     reportId: 'client_3_report_2022',
     title: 'Allianz Group Sustainability Report 2022',
@@ -165,7 +172,7 @@ const mockReportsDetails = {
     timestamp: '2022-12-03',
     analysis: mockAnalysis
   },
-  'client_2_report_2023': {
+  client_2_report_2023: {
     clientId: 2,
     reportId: 'client_2_report_2023',
     title: 'Allianz Group Sustainability Report 2023',
@@ -173,7 +180,7 @@ const mockReportsDetails = {
     timestamp: '2023-12-01',
     analysis: mockAnalysis
   },
-  'client_3_report_2023': {
+  client_3_report_2023: {
     clientId: 3,
     reportId: 'client_3_report_2023',
     title: 'Allianz Group Sustainability Report 2023',
@@ -181,7 +188,7 @@ const mockReportsDetails = {
     timestamp: '2023-12-03',
     analysis: mockAnalysis
   },
-  'client_4_report_2023': {
+  client_4_report_2023: {
     clientId: 4,
     reportId: 'client_4_report_2023',
     title: 'Bayer Sustainability Report 2023',
@@ -189,7 +196,7 @@ const mockReportsDetails = {
     timestamp: '2023-12-01',
     analysis: mockAnalysis
   },
-  'client_5_report_2023': {
+  client_5_report_2023: {
     clientId: 5,
     reportId: 'client_5_report_2023',
     title: 'Beiersdorf Business Report 2023',
@@ -197,7 +204,7 @@ const mockReportsDetails = {
     timestamp: '2023-12-01',
     analysis: mockAnalysis
   },
-  'client_6_report_2023': {
+  client_6_report_2023: {
     clientId: 6,
     reportId: 'client_6_report_2023',
     title: 'Brenntag Sustainability Report 2023',
@@ -205,7 +212,7 @@ const mockReportsDetails = {
     timestamp: '2023-12-01',
     analysis: mockAnalysis
   },
-  'client_7_report_2023': {
+  client_7_report_2023: {
     clientId: 7,
     reportId: 'client_7_report_2023',
     title: 'Continental Sustainability Report 2023',
@@ -213,7 +220,7 @@ const mockReportsDetails = {
     timestamp: '2023-12-01',
     analysis: mockAnalysis
   },
-  'client_8_report_2023': {
+  client_8_report_2023: {
     clientId: 8,
     reportId: 'client_8_report_2023',
     title: 'KPMG Non-Financial Report 2023',
