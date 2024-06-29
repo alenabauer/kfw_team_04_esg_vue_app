@@ -12,15 +12,15 @@
 import { NDataTable } from 'naive-ui'
 import { useClientsStore } from '@/stores/store'
 import { storeToRefs } from 'pinia'
+import { onMounted } from 'vue'
 
 const store = useClientsStore()
-const { getClients } = storeToRefs(store)
+const { clients } = storeToRefs(store)
 
-const clientsData = getClients
+const clientsData = clients
 
 const columns = [
   {
-    title: 'Client',
     key: 'client',
     render: (row) => row.client || row.name
   },
@@ -40,4 +40,8 @@ const columns = [
 ]
 
 const rowKey = (row) => row.clientId || row.index
+
+onMounted(() => {
+  store.fetchAllClientsReports()
+})
 </script>
