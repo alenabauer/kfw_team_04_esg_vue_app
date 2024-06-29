@@ -22,6 +22,7 @@ const clientsData = clients
 
 const columns = [
   {
+    title: 'Company Name',
     key: 'client',
     render: (row) => row.client || row.name
   },
@@ -31,7 +32,6 @@ const columns = [
     render: (row) => (row.children ? row.children.length : '-')
   },
   {
-    title: 'Report',
     key: 'report',
     render: (row) =>
       h(

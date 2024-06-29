@@ -5,12 +5,12 @@ export const useClientsStore = defineStore('clients', {
   state: () => ({
     clients: [
       {
-        client: 'Client A',
+        client: 'SolarHorizon Group',
         clientId: 1,
         children: []
       },
       {
-        client: 'Client B',
+        client: 'ClearSky Holdings',
         clientId: 2,
         children: []
       }
