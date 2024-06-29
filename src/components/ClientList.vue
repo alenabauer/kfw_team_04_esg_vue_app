@@ -26,7 +26,9 @@ const columns = [
     key: 'client',
     render: (row) => row.client || row.name,
     flexGrow: 0,
-    width: 200
+    width: 200,
+    defaultSortOrder: 'ascend',
+    sorter: 'default'
   },
   {
     title: 'Reports',

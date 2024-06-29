@@ -18,7 +18,7 @@ const themeOverrides = {
   common: {
     primaryColor: '#005a8c',
     primaryColorHover: '#00446e',
-    primaryColorPressed: '#00446e'
-  }
+    primaryColorPressed: '#00446e',
+  },
 }
 </script>
