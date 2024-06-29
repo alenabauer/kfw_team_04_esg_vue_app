@@ -65,6 +65,50 @@ export const useClientsStore = defineStore('clients', {
       for (const client of this.clients) {
         await this.fetchReports(client.clientId)
       }
+    },
+
+    async fetchReportById(reportId) {
+      console.log('Fetching report with id: ', reportId)
+      try {
+        // const response = await axios.get(`/api/reports/${reportId}`)
+        let mockData = {}
+        if (reportId === 'cl_1_rep_1') {
+          mockData = {
+            clientId: 1,
+            reportId: 'cl_1_rep_1',
+            title: 'Report 1',
+            timestamp: '2024-06-01T12:00:00Z',
+            analysis: {
+              answers: [
+                {
+                  question_id: 1,
+                  question:
+                    'Gibt es eine Nachhaltigkeitsberichterstattung im Unternehmen? Falls ja, nenne den Standard, den das Unternehmen verwendet.',
+                  answer: 'Ja, GRI',
+                  contexts: ['context 1']
+                },
+                {
+                  question_id: 2,
+                  question: 'Wie hoch war der Wasserverbrauch im Fiskaljahr?',
+                  answer: '1000 m³',
+                  contexts: ['context 1']
+                },
+                {
+                  question_id: 3,
+                  question:
+                    'Welche transitorischen Risikotreiber sind für das Unternehmen von besonderer Bedeutung?',
+                  answer: 'Klimawandel und Digitalisierung',
+                  contexts: []
+                }
+              ]
+            }
+          }
+        }
+        let response = { data: mockData }
+        return response.data
+      } catch (error) {
+        console.error('Failed to fetch report:', error)
+      }
     }
   }
 })
