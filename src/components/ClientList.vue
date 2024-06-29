@@ -1,6 +1,5 @@
 <template>
   <n-data-table
-    style="margin: 2rem 0"
     :columns="columns"
     :data="clientsData"
     :children-key="'children'"
@@ -12,10 +11,12 @@
 import { NDataTable } from 'naive-ui'
 import { useClientsStore } from '@/stores/store'
 import { storeToRefs } from 'pinia'
-import { onMounted } from 'vue'
+import { onMounted, h } from 'vue'
+import { useRouter } from 'vue-router'
 
 const store = useClientsStore()
 const { clients } = storeToRefs(store)
+const router = useRouter()
 
 const clientsData = clients
 
@@ -30,8 +31,17 @@ const columns = [
     render: (row) => (row.children ? row.children.length : '-')
   },
   {
+    title: 'Report',
     key: 'report',
-    minWidth: 150
+    render: (row) =>
+      h(
+        'a',
+        {
+          onClick: () => router.push(`/clients/${row.clientId}/reports/${row.reportId}`),
+          style: 'cursor: pointer; color: blue; text-decoration: underline;'
+        },
+        row.report || ''
+      )
   },
   {
     key: 'timestamp',

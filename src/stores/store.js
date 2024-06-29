@@ -30,11 +30,13 @@ export const useClientsStore = defineStore('clients', {
           mockData = [
             {
               clientId: 1,
+              reportId: 'cl_1_rep_1',
               report: 'Report 1',
               timestamp: '2024-06-01T12:00:00Z'
             },
             {
               clientId: 1,
+              reportId: 'cl_1_rep_2',
               report: 'Report 2',
               timestamp: '2024-06-02T12:00:00Z'
             }
@@ -44,6 +46,7 @@ export const useClientsStore = defineStore('clients', {
             {
               clientId: 2,
               report: 'Report 3',
+              reportId: 'cl_2_rep_1',
               timestamp: '2024-06-03T12:00:00Z'
             }
           ]

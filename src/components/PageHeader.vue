@@ -1,5 +1,5 @@
 <template>
-  <n-page-header subtitle="ESG Report Analyser">
+  <n-page-header subtitle="ESG Report Analyser" style="margin-bottom: 2rem">
     <template #title> Verena 2.0 </template>
     <template #avatar>
       <n-icon size="large" color="#abba2d"> <globe /> </n-icon>
