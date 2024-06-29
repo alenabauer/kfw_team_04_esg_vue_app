@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link>
     </n-breadcrumb-item>
     <n-breadcrumb-item>Clients</n-breadcrumb-item>
-    <n-breadcrumb-item>{{ clientId }}</n-breadcrumb-item>
+    <n-breadcrumb-item v-if="client">{{ client?.client }}</n-breadcrumb-item>
     <n-breadcrumb-item>Reports</n-breadcrumb-item>
     <n-breadcrumb-item v-if="report">{{ report.title }}</n-breadcrumb-item>
   </n-breadcrumb>
@@ -22,8 +22,9 @@
 </template>
 
 <script setup>
-import { onMounted, ref, defineProps, computed } from 'vue'
+import { onMounted, ref, defineProps, computed, toRefs } from 'vue'
 import { useClientsStore } from '@/stores/store'
+import { storeToRefs } from 'pinia'
 import { NList, NListItem, NThing, NBreadcrumb, NBreadcrumbItem } from 'naive-ui'
 
 const props = defineProps({
@@ -38,7 +39,14 @@ const props = defineProps({
 })
 
 const store = useClientsStore()
+const { clients } = storeToRefs(store)
+const { clientId } = toRefs(props)
 const report = ref(null)
+
+const client = computed(() => {
+  return clients.value.find((client) => client.clientId === parseInt(clientId.value, 10))
+})
+
 const answers = computed(() => report.value?.analysis?.answers)
 
 onMounted(async () => {
