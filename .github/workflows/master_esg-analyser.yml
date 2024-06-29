@@ -42,6 +42,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
+          path: dist/
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -49,5 +50,5 @@ jobs:
         with:
           app-name: 'esg-analyser'
           slot-name: 'Production'
-          package: dist
+          package: dist/
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6BECF3398B924577B1A955DA762D4E32 }}
