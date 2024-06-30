@@ -24,7 +24,11 @@ const columns = [
   {
     title: 'Company Name',
     key: 'client',
-    render: (row) => row.client || row.name
+    render: (row) => row.client || row.name,
+    flexGrow: 0,
+    width: 200,
+    defaultSortOrder: 'ascend',
+    sorter: 'default'
   },
   {
     title: 'Reports',
@@ -38,9 +42,9 @@ const columns = [
         'a',
         {
           onClick: () => router.push(`/clients/${row.clientId}/reports/${row.reportId}`),
-          style: 'cursor: pointer; color: blue; text-decoration: underline;'
+          style: 'cursor: pointer; color: #005a8c; text-decoration: underline;'
         },
-        row.report || ''
+        row.fileName || ''
       )
   },
   {
