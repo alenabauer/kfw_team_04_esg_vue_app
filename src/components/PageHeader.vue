@@ -25,7 +25,7 @@
         style="margin-bottom: 1rem"
         clearable
       />
-      <FileUpload :data="getExtraData" v-if="selectedClientId" />
+      <FileUpload @close="showUploadModal = false" :data="getExtraData" v-if="selectedClientId" />
     </n-modal>
   </div>
 </template>

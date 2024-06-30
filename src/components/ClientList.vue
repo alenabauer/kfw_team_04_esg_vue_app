@@ -42,7 +42,7 @@ const columns = [
         'a',
         {
           onClick: () => router.push(`/clients/${row.clientId}/reports/${row.reportId}`),
-          style: 'cursor: pointer; color: blue; text-decoration: underline;'
+          style: 'cursor: pointer; color: #005a8c; text-decoration: underline;'
         },
         row.fileName || ''
       )
