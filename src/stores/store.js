@@ -7,6 +7,18 @@ const mockReports = {
       reportId: 'client_1_report_2023',
       fileName: '2023_Volkswagen_Group_Nachhaltigkeitsbericht',
       timestamp: '2023-12-01'
+    },
+    {
+      clientId: 1,
+      reportId: 'client_1_report_2022',
+      fileName: '2022_Volkswagen_Group_Nachhaltigkeitsbericht',
+      timestamp: '2022-12-01'
+    },
+    {
+      clientId: 1,
+      reportId: 'client_1_report_2021',
+      fileName: '2021_Volkswagen_Group_Nachhaltigkeitsbericht',
+      timestamp: '2021-12-01'
     }
   ],
   2: [
@@ -45,6 +57,24 @@ const mockReports = {
       reportId: 'client_5_report_2023',
       fileName: 'Beiersdorf-geschaeftsbericht-2023-de',
       timestamp: '2023-12-01'
+    },
+    {
+      clientId: 5,
+      reportId: 'client_5_report_2022',
+      fileName: 'Beiersdorf-geschaeftsbericht-2022-de',
+      timestamp: '2022-12-01'
+    },
+    {
+      clientId: 5,
+      reportId: 'client_5_report_2021',
+      fileName: 'Beiersdorf-geschaeftsbericht-2021-de',
+      timestamp: '2021-12-01'
+    },
+    {
+      clientId: 5,
+      reportId: 'client_5_report_2020',
+      fileName: 'Beiersdorf-geschaeftsbericht-2020-de',
+      timestamp: '2020-12-01'
     }
   ],
   6: [
@@ -164,6 +194,22 @@ const mockReportsDetails = {
     timestamp: '2023-12-01',
     analysis: mockAnalysis
   },
+  client_1_report_2022: {
+    clientId: 1,
+    reportId: 'client_1_report_2022',
+    title: 'Volkswagen Group Sustainability Report 2022',
+    fileName: '2022_Volkswagen_Group_Nachhaltigkeitsbericht',
+    timestamp: '2022-12-01',
+    analysis: mockAnalysis
+  },
+  client_1_report_2021: {
+    clientId: 1,
+    reportId: 'client_1_report_2021',
+    title: 'Volkswagen Group Sustainability Report 2021',
+    fileName: '2021_Volkswagen_Group_Nachhaltigkeitsbericht',
+    timestamp: '2021-12-01',
+    analysis: mockAnalysis
+  },
   client_3_report_2022: {
     clientId: 3,
     reportId: 'client_3_report_2022',
@@ -202,6 +248,30 @@ const mockReportsDetails = {
     title: 'Beiersdorf Business Report 2023',
     fileName: 'Beiersdorf-geschaeftsbericht-2023-de',
     timestamp: '2023-12-01',
+    analysis: mockAnalysis
+  },
+  client_5_report_2022: {
+    clientId: 5,
+    reportId: 'client_5_report_2022',
+    title: 'Beiersdorf Business Report 2022',
+    fileName: 'Beiersdorf-geschaeftsbericht-2022-de',
+    timestamp: '2022-12-01',
+    analysis: mockAnalysis
+  },
+  client_5_report_2021: {
+    clientId: 5,
+    reportId: 'client_5_report_2021',
+    title: 'Beiersdorf Business Report 2021',
+    fileName: 'Beiersdorf-geschaeftsbericht-2021-de',
+    timestamp: '2021-12-01',
+    analysis: mockAnalysis
+  },
+  client_5_report_2020: {
+    clientId: 5,
+    reportId: 'client_5_report_2020',
+    title: 'Beiersdorf Business Report 2020',
+    fileName: 'Beiersdorf-geschaeftsbericht-2020-de',
+    timestamp: '2020-12-01',
     analysis: mockAnalysis
   },
   client_6_report_2023: {
