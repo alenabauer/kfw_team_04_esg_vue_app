@@ -126,15 +126,11 @@
                 <n-number-animation
                   ref="numberAnimationInstRef"
                   :from="0"
-                  :to="35.51"
+                  :to="29.75"
                   :active="true"
                   :precision="2"
                 />%</n-text
               >
-              <n-flex style="color: #abba2d" justify="center" align="center">
-                <n-text style="color: inherit; font-size: 1rem">+5.37%</n-text>
-                <n-icon><caret-up /></n-icon>
-              </n-flex>
             </n-flex>
           </n-grid-item>
         </n-grid>
@@ -204,7 +200,6 @@ import {
   PeopleOutline as People,
   BarChartOutline as BarChart,
   CaretDown,
-  CaretUp,
   InformationCircle as Info
 } from '@vicons/ionicons5'
 

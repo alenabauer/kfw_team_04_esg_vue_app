@@ -109,14 +109,16 @@ const mockAnalysis = {
       question_id: 1,
       question:
         'Is there sustainability reporting in the company? If yes, name the standard the company uses.',
-      answer: 'Yes, GRI',
+      answer:
+        "Yes, the company has sustainability reporting. The report is conducted according to the principles of the Global Reporting Standards' sustainability reporting standards.",
       contexts: ['P15 §3'],
       category: 'governance'
     },
     {
       question_id: 2,
       question: 'What was the water consumption in the fiscal year?',
-      answer: '1,178,788 m³',
+      answer:
+        'In 2021, the water consumption was 1,237,598.0; in 2022, it was 1,307,990.1; and in 2023, it was 1,178,788.0. For further insights into water consumption, refer to section 03.2 and table ENV-7. Additionally, there has been a reduction in water consumption per employee since 2019, with a consumption of 8 in 2021.',
       contexts: ['P94 §1'],
       category: 'environmental'
     },
@@ -124,7 +126,7 @@ const mockAnalysis = {
       question_id: 3,
       question: 'Which transitional risk drivers are particularly significant for the company?',
       answer:
-        'Environmental and climate change risks, human rights violations, risks to local communities, and workforce risks',
+        'The most relevant climate risks for Allianz as an organization are related to proprietary investments and property/liability insurance. Risks associated with corporate activities and life/health insurance are also present, albeit to a lesser extent. Regarding the timeframe, the assessment considers transitional risks to be more relevant in the short to medium term than in the long term under scenarios pursuing strict alignment with the Paris Agreement targets.',
       contexts: ['P15 §3', 'P70 §1'],
       category: 'environmental'
     },
@@ -139,7 +141,8 @@ const mockAnalysis = {
     {
       question_id: 5,
       question: 'Which acute physical climate risks are most relevant for the company?',
-      answer: 'Extreme weather',
+      answer:
+        'The most relevant acute physical climate risks for Allianz in the short to medium term include events such as floods, droughts, or wildfires.',
       contexts: ['P10 §3', 'P134 §4'],
       category: 'environmental'
     },
@@ -147,14 +150,16 @@ const mockAnalysis = {
       question_id: 6,
       question:
         'What goals does the company have for increasing the proportion of women in leadership positions?',
-      answer: '40%',
+      answer:
+        'The company aims to achieve a 30% share of women in Allianz Global Executive and Senior Executive positions, a 40% share in Executive positions, and 50% in talent pools by 2024.',
       contexts: ['P140 §1'],
       category: 'social'
     },
     {
       question_id: 7,
       question: 'What is the proportion of women in leadership positions in the reporting year?',
-      answer: '35.51%',
+      answer:
+        'In the reporting year, the proportion of women in leadership positions at Allianz Global Executives (AGE) was 25.96%, at Allianz Senior Executives (ASE) 27.90%, and at Allianz Executives (AE) 35.51%.',
       contexts: ['P30 §1'],
       category: 'social'
     },
@@ -162,7 +167,8 @@ const mockAnalysis = {
       question_id: 8,
       question:
         'Is there a person responsible for sustainability in the company? If yes, are they a member of the board?',
-      answer: 'Yes, yes',
+      answer:
+        'Yes, there is a person responsible for sustainability within the company. This person is a member of the Executive Board and is supported by one or more sustainability officers. Ultimately, the responsibility for sustainability rests with the Executive Board of Allianz SE as the parent company of the group.',
       contexts: ['P15 §3'],
       category: 'governance'
     },
@@ -170,7 +176,8 @@ const mockAnalysis = {
       question_id: 9,
       question:
         "Is the achievement of sustainability goals part of the board's compensation system?",
-      answer: 'Yes',
+      answer:
+        "Yes, the achievement of sustainability goals is part of the executive board's compensation system. The sustainability goals are linked to the board's compensation and form part of the individual contribution factor. This also includes the decarbonization targets for proprietary investments and own operations. Further information can be found in the Remuneration Report and in the section 'Corporate Responsibility Governance and Strategy'",
       contexts: ['P15 §3'],
       category: 'governance'
     },
@@ -178,7 +185,8 @@ const mockAnalysis = {
       question_id: 10,
       question:
         'What was the electricity consumption in the reporting year in GWh, and what was the percentage of electricity consumption from renewable sources?',
-      answer: '1,574,357 GJ, 100%',
+      answer:
+        'The information in the text is given in GJ and not in GWh (1,574,357 GJ). It is mentioned that in the reporting year, 100% of the electricity consumption came from renewable, low-carbon sources.',
       contexts: ['P94 §1'],
       category: 'environmental'
     }
