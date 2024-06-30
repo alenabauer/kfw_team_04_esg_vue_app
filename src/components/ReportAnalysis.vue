@@ -45,6 +45,12 @@
             >
               <n-text>{{ answer.question }}</n-text>
               <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+              <n-tooltip trigger="hover" style="background-color: rgba(130, 130, 130, 0.85)">
+                <template #trigger>
+                  <n-icon color="rgba(160, 160, 160, 0.5)" size="large"><info /></n-icon>
+                </template>
+                {{ answer.contexts.toString() }}
+              </n-tooltip>
             </n-flex>
           </n-grid-item>
           <n-grid-item span="2">
@@ -105,6 +111,12 @@
             <n-flex v-for="answer in social" :key="answer.question_id" style="margin-bottom: 1rem">
               <n-text>{{ answer.question }}</n-text>
               <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+              <n-tooltip trigger="hover" style="background-color: rgba(130, 130, 130, 0.85)">
+                <template #trigger>
+                  <n-icon color="rgba(160, 160, 160, 0.5)" size="large"><info /></n-icon>
+                </template>
+                {{ answer.contexts.toString() }}
+              </n-tooltip>
             </n-flex>
           </n-grid-item>
           <n-grid-item span="2">
@@ -150,6 +162,12 @@
             >
               <n-text>{{ answer.question }}</n-text>
               <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+              <n-tooltip trigger="hover" style="background-color: rgba(130, 130, 130, 0.85)">
+                <template #trigger>
+                  <n-icon color="rgba(160, 160, 160, 0.5)" size="large"><info /></n-icon>
+                </template>
+                {{ answer.contexts.toString() }}
+              </n-tooltip>
             </n-flex>
           </n-grid-item>
           <n-grid-item span="2" align="center">
@@ -177,7 +195,8 @@ import {
   NText,
   NGrid,
   NGridItem,
-  NNumberAnimation
+  NNumberAnimation,
+  NTooltip
 } from 'naive-ui'
 import {
   DownloadOutline as Download,
@@ -185,7 +204,8 @@ import {
   PeopleOutline as People,
   BarChartOutline as BarChart,
   CaretDown,
-  CaretUp
+  CaretUp,
+  InformationCircle as Info
 } from '@vicons/ionicons5'
 
 const props = defineProps({

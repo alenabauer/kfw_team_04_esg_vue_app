@@ -110,14 +110,14 @@ const mockAnalysis = {
       question:
         'Is there sustainability reporting in the company? If yes, name the standard the company uses.',
       answer: 'Yes, GRI',
-      contexts: ['context 1'],
+      contexts: ['P15 §3'],
       category: 'governance'
     },
     {
       question_id: 2,
       question: 'What was the water consumption in the fiscal year?',
       answer: '1,178,788 m³',
-      contexts: ['context 1'],
+      contexts: ['P94 §1'],
       category: 'environmental'
     },
     {
@@ -125,7 +125,7 @@ const mockAnalysis = {
       question: 'Which transitional risk drivers are particularly significant for the company?',
       answer:
         'Environmental and climate change risks, human rights violations, risks to local communities, and workforce risks',
-      contexts: [],
+      contexts: ['P15 §3', 'P70 §1'],
       category: 'environmental'
     },
     {
@@ -133,14 +133,14 @@ const mockAnalysis = {
       question:
         'To what extent does the company plan to reduce greenhouse gas emissions (Scope 1) by 2030?',
       answer: '70% against a 2019 baseline',
-      contexts: [],
+      contexts: ['P33 §3', 'P70 §1'],
       category: 'environmental'
     },
     {
       question_id: 5,
       question: 'Which acute physical climate risks are most relevant for the company?',
       answer: 'Extreme weather',
-      contexts: [],
+      contexts: ['P10 §3', 'P134 §4'],
       category: 'environmental'
     },
     {
@@ -148,14 +148,14 @@ const mockAnalysis = {
       question:
         'What goals does the company have for increasing the proportion of women in leadership positions?',
       answer: '40%',
-      contexts: [],
+      contexts: ['P140 §1'],
       category: 'social'
     },
     {
       question_id: 7,
       question: 'What is the proportion of women in leadership positions in the reporting year?',
       answer: '35.51%',
-      contexts: [],
+      contexts: ['P30 §1'],
       category: 'social'
     },
     {
@@ -163,7 +163,7 @@ const mockAnalysis = {
       question:
         'Is there a person responsible for sustainability in the company? If yes, are they a member of the board?',
       answer: 'Yes, yes',
-      contexts: [],
+      contexts: ['P15 §3'],
       category: 'governance'
     },
     {
@@ -171,7 +171,7 @@ const mockAnalysis = {
       question:
         "Is the achievement of sustainability goals part of the board's compensation system?",
       answer: 'Yes',
-      contexts: [],
+      contexts: ['P15 §3'],
       category: 'governance'
     },
     {
@@ -179,7 +179,7 @@ const mockAnalysis = {
       question:
         'What was the electricity consumption in the reporting year in GWh, and what was the percentage of electricity consumption from renewable sources?',
       answer: '1,574,357 GJ, 100%',
-      contexts: [],
+      contexts: ['P94 §1'],
       category: 'environmental'
     }
   ]
