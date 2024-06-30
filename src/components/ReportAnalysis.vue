@@ -43,8 +43,8 @@
               :key="answer.question_id"
               style="margin-bottom: 1rem"
             >
-              <n-text>{{ answer.question }}</n-text>
-              <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+              <n-text style="color: #005a8c; font-weight: 600">{{ answer.question }}</n-text>
+              <n-text>{{ answer.answer }}</n-text>
               <n-tooltip trigger="hover" style="background-color: rgba(130, 130, 130, 0.85)">
                 <template #trigger>
                   <n-icon color="rgba(160, 160, 160, 0.5)" size="large"><info /></n-icon>
@@ -109,8 +109,8 @@
         <n-grid cols="12" x-gap="16">
           <n-grid-item span="10">
             <n-flex v-for="answer in social" :key="answer.question_id" style="margin-bottom: 1rem">
-              <n-text>{{ answer.question }}</n-text>
-              <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+              <n-text style="color: #005a8c; font-weight: 600">{{ answer.question }}</n-text>
+              <n-text>{{ answer.answer }}</n-text>
               <n-tooltip trigger="hover" style="background-color: rgba(130, 130, 130, 0.85)">
                 <template #trigger>
                   <n-icon color="rgba(160, 160, 160, 0.5)" size="large"><info /></n-icon>
@@ -156,8 +156,8 @@
               :key="answer.question_id"
               style="margin-bottom: 1rem"
             >
-              <n-text>{{ answer.question }}</n-text>
-              <n-text style="color: #005a8c; font-weight: 600">{{ answer.answer }}</n-text>
+              <n-text style="color: #005a8c; font-weight: 600">{{ answer.question }}</n-text>
+              <n-text>{{ answer.answer }}</n-text>
               <n-tooltip trigger="hover" style="background-color: rgba(130, 130, 130, 0.85)">
                 <template #trigger>
                   <n-icon color="rgba(160, 160, 160, 0.5)" size="large"><info /></n-icon>
